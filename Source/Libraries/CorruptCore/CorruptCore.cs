@@ -37,7 +37,7 @@ namespace RTCV.CorruptCore
     public static class RtcCore
     {
         //General RTC Values
-        public const string RtcVersion = "5.1.1-b2";
+        public const string RtcVersion = "5.1.1";
         private static readonly NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
         private static int seed = (int)DateTime.Now.Ticks;
@@ -127,7 +127,11 @@ namespace RTCV.CorruptCore
             set => AllSpec.CorruptCoreSpec.Update(RTCSPEC.CORE_SELECTEDENGINE, value);
         }
 
-        public static ICorruptionEngine SelectedPluginEngine { get; set; } = null;
+        public static ICorruptionEngine SelectedPluginEngine
+        {
+            get => (ICorruptionEngine)AllSpec.CorruptCoreSpec[RTCSPEC.CORE_SELECTEDPLUGINENGINE];
+            set => AllSpec.CorruptCoreSpec.Update(RTCSPEC.CORE_SELECTEDPLUGINENGINE, value);
+        }
 
         public static int CurrentPrecision
         {
