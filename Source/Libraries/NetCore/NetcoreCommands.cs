@@ -69,6 +69,7 @@ namespace RTCV.NetCore.Commands
         public const string DomainPokeBytes = nameof(Remote) + "_" + nameof(DomainPokeBytes);
         public const string DomainRefreshDomains = nameof(Remote) + "_" + nameof(DomainRefreshDomains);
         public const string DomainGetDomains = nameof(Remote) + "_" + nameof(DomainGetDomains);
+        public const string DomainSpecifyDomains = nameof(Remote) + "_" + nameof(DomainSpecifyDomains);
         public const string DomainVMDAdd = nameof(Remote) + "_" + nameof(DomainVMDAdd);
         public const string DomainVMDRemove = nameof(Remote) + "_" + nameof(DomainVMDRemove);
         public const string DomainActiveTableMakeDump = nameof(Remote) + "_" + nameof(DomainActiveTableMakeDump);

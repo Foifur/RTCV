@@ -154,6 +154,11 @@ namespace RTCV.UI
                             UICore.CheckHotkey(hotkey);
                         }
                         break;
+                    case Remote.DomainSpecifyDomains:
+                        {
+                            S.GET<MemoryDomainsForm>().SetMemoryDomainsAllButSelectedDomains(advancedMessage.objectValue as string[] ?? new string[] { });
+                        }
+                        break;
                 }
             }
             catch (Exception ex)
