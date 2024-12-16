@@ -114,6 +114,7 @@
             this.lbMemoryDomains.Tag = "color:dark2";
             this.lbMemoryDomains.SelectedIndexChanged += new System.EventHandler(this.HandleMemoryDomainSelectionChange);
             this.lbMemoryDomains.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HandleMemoryDomainsMouseDown);
+            this.lbMemoryDomains.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbMemoryDomains_DoubleClick);
             //
             // MemoryDomainsForm
             //

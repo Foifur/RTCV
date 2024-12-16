@@ -315,5 +315,18 @@ namespace RTCV.UI
                 }
             }
         }
+
+        private void lbMemoryDomains_DoubleClick(object sender, MouseEventArgs e)
+        {
+            int index = this.lbMemoryDomains.IndexFromPoint(e.Location);
+            if (index != System.Windows.Forms.ListBox.NoMatches)
+            {
+                for (int i = 0; i < lbMemoryDomains.Items.Count; i++)
+                {
+                    bool state = i == index;
+                    lbMemoryDomains.SetSelected(i, state);
+                }
+            }
+        }
     }
 }
